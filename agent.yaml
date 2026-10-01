@@ -1,0 +1,63 @@
+spec_version: "0.1.0"
+name: "agentscope-runtime-framework"
+version: "1.0.0"
+description: >
+  Industrial multi-agent orchestration framework supporting SOP workflows,
+  leader-member delegation, model router middleware, and real-time voice agents.
+author: "Chithra R"
+license: "Apache-2.0"
+
+model:
+  preferred: "claude-3-5-sonnet"
+  fallback:
+    - "gpt-4o"
+    - "gemini-2.0-flash"
+  constraints:
+    temperature: 0.2
+    max_tokens: 8192
+
+skills:
+  - team-pipeline-orchestration
+  - standard-operating-procedures
+  - model-router-middleware
+  - realtime-multimodal-agent
+
+tools:
+  - team-pipeline-runner
+  - sop-engine-coordinator
+  - model-router-middleware
+  - realtime-voice-bridge
+  - a2a-protocol-gateway
+
+runtime:
+  max_turns: 25
+  temperature: 0.2
+  timeout: 180
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - mitre-atlas
+    - owasp-llm
+  data_governance:
+    pii_handling: redact
+    data_classification: confidential
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - multi-agent
+  - agent-framework
+  - sop
+  - model-router
+  - realtime-agent
+  - orchestration
+
+metadata:
+  domain: "developer-tools"
+  category: "Developer Tools"

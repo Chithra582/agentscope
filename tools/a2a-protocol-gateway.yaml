@@ -1,0 +1,18 @@
+name: "a2a-protocol-gateway"
+description: "Encapsulates and dispatches inter-agent communication messages across local and distributed clusters."
+input_schema:
+  type: "object"
+  properties:
+    source_agent_id:
+      type: "string"
+      description: "Unique ID of transmitting agent."
+    target_agent_id:
+      type: "string"
+      description: "Target recipient agent ID or broadcast channel."
+    message_payload:
+      type: "object"
+      description: "Validated structured payload containing agent messages or artifacts."
+  required:
+    - "source_agent_id"
+    - "target_agent_id"
+    - "message_payload"

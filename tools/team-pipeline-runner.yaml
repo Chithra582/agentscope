@@ -1,0 +1,22 @@
+name: "team-pipeline-runner"
+description: "Executes collaborative leader-member multi-agent teams with consensus synthesis and turn management."
+input_schema:
+  type: "object"
+  properties:
+    team_id:
+      type: "string"
+      description: "Identifier for the agent team topology."
+    task_prompt:
+      type: "string"
+      description: "The high-level prompt or problem statement to solve."
+    max_turns:
+      type: "integer"
+      description: "Maximum allowed dialogue iterations across team members."
+    required_roles:
+      type: "array"
+      items:
+        type: "string"
+      description: "List of specialist agent roles required in the team session."
+  required:
+    - "team_id"
+    - "task_prompt"

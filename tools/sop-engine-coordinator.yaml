@@ -1,0 +1,17 @@
+name: "sop-engine-coordinator"
+description: "Coordinates deterministic Standard Operating Procedure state machines across distributed agents."
+input_schema:
+  type: "object"
+  properties:
+    sop_schema:
+      type: "string"
+      description: "YAML or JSON representation of the SOP workflow state machine."
+    initial_payload:
+      type: "object"
+      description: "Input context dictionary supplied to the first SOP node."
+    strict_validation:
+      type: "boolean"
+      description: "Whether transition failures trigger immediate workflow termination."
+  required:
+    - "sop_schema"
+    - "initial_payload"

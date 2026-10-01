@@ -1,0 +1,17 @@
+name: "realtime-voice-bridge"
+description: "Manages low-latency duplex audio streaming and interrupt handling for real-time conversational agents."
+input_schema:
+  type: "object"
+  properties:
+    session_id:
+      type: "string"
+      description: "Unique real-time multimodal session identifier."
+    audio_format:
+      type: "string"
+      description: "Audio sample format e.g. pcm16_24khz or opus."
+    interruption_threshold_ms:
+      type: "integer"
+      description: "Voice activity detection pause duration before interrupting agent output."
+  required:
+    - "session_id"
+    - "audio_format"

@@ -1,0 +1,17 @@
+name: "model-router-middleware"
+description: "Selects optimal LLM backends based on task complexity, provider health, and cost budgets."
+input_schema:
+  type: "object"
+  properties:
+    prompt_token_count:
+      type: "integer"
+      description: "Estimated input prompt tokens."
+    required_capability:
+      type: "string"
+      description: "Target capability requirement such as reasoning, code, or low_latency."
+    latency_sla_ms:
+      type: "integer"
+      description: "Maximum permissible latency SLA in milliseconds."
+  required:
+    - "prompt_token_count"
+    - "required_capability"
