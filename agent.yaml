@@ -1,9 +1,7 @@
 spec_version: "0.1.0"
-name: "agentscope-runtime-framework"
-version: "1.0.0"
-description: >
-  Industrial multi-agent orchestration framework supporting SOP workflows,
-  leader-member delegation, model router middleware, and real-time voice agents.
+name: agentscope
+version: 1.0.0
+description: Industrial multi-agent orchestration framework supporting SOP workflows, leader-member delegation, model router middleware, and real-time voice agents.
 author: "Chithra R"
 license: "Apache-2.0"
 
@@ -59,5 +57,5 @@ tags:
   - orchestration
 
 metadata:
-  domain: "Developer Tools / Multi-Agent Orchestration Framework"
-  category: "Developer Tools"
+  domain: Developer Tools / Multi-Agent Orchestration Framework
+  category: Developer Tools
